@@ -1,0 +1,12 @@
+In below section i have created the Hive use case on how we have used the COLLECT_SET function in hive on table with 200 million + table
+
+SELECT * FROM
+(
+   SELECT ID, SOURCE_CD, PROV_NUM, PROV_NUM_2, CONCAT_WS(",", COLLECT_SET(CAST(MED_SVC_GRP_CODE AS STRING)) STR_MSED_CATG FROM CLAIM
+   GROUP BY 
+   ID, SOURCE_CD, PROV_NUM, PROV_NUM_2 
+ )
+ WHERE STR_MSED_CATG LIKE '%ER%'
+ 
+ Here the attemp is to provide some addtional examples use cases for Hive UDF COLLECT_SET which return the string array. Thanks to all those Gurus 
+ who has given several examples on this and i am adding few more to support the developer community
