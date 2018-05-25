@@ -1,0 +1,11 @@
+Use Case: Creating the ETL LOAD CYCLE table in HIVE and performing the insert overwrite operations to update the status of the load. 
+
+Description : In traditional RDBMS managing the ETL load is not a big challenge. In hadoop hive we have developed one such a process where
+              the ETL_LOAD_CYCLE table is used to switch the status of load from TBD > In-Progress >> Complete. With this code our attempt
+              is to bring power in HIVE ecosystem in order to manage the loads effectively. There are much other better ways but this can be
+              used based on the need.
+Dev 
+              
+  Step 1:
+  
+  
